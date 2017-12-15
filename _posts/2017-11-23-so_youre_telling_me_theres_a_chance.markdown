@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "So You're Telling Me There's A Chance?"
-date:       2017-11-23 18:17:35 +0000
+date:       2017-11-23 13:17:36 -0500
 permalink:  so_youre_telling_me_theres_a_chance
 ---
 
@@ -15,7 +15,7 @@ Everybody knows that the tech field is the place to be, its no big secret, and s
 I decided to adopt a policy of full immersion. Round the clock bombardment of all things computing. I was bouncing around the plenitude of free developer resources available, reading books on the history of computing, listening to engineers' podcasts when I barely understood half of what they were saying, watching historical documentaries such as HBO's Silicon Valley, anything and everything I could do to learn more about coding. I was doing it. Right away, I knew I liked it. Behind every line of code lies a cold, hard, mathematical logic, but yet, it can be expressed so elequently, even artistically, in a way that I had never before encountered in my studies. It is that juxtaposition, logic and expression, that entices me. That is what drew me into development and led me here, to the Flatiron School.
 
 
-So my journey begins... I guess even a one in a million chance is still a chance.
+So my journey begins... I guess even a one in a million chance is still a chance.     
 
 
 
