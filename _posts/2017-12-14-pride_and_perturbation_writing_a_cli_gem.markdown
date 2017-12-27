@@ -19,4 +19,4 @@ As you can see, there are minor issues. So what did I do? I applied a ridiculous
 
 Before long, all of my stubbed out code was real, functional code. I had a command line dictionary up and running. The pride I felt the first time my program executed without any bugs is hard to put into words. I had built something out of nothing. That is a great feeling, and it really solidified my belief that I made the right decision by enrolling at Flatiron School. Unfortunately I wasn't quite out of the weeds yet, because as I have discovered, a functional program is not necessarily a finished program. 
 
-Stay tuned later this week to hear the rest of my woes and exultations in Part II.
+Stay tuned to hear the rest of my woes and exultations in [Part II](https://cboujoukos.github.io/pride_and_perturbation_writing_a_cli_gem_part_ii).
