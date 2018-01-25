@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Sinatra, ERB, and ContentFor"
+title:      "Sinatra, ERB, and Sinatra::ContentFor"
 date:       2018-01-25 17:29:19 -0500
 permalink:  sinatra_erb_and_sinatra_contentfor
 ---
@@ -11,4 +11,5 @@ If you have worked with Sinatra before, you have certainly become familiar with 
 
 ![](https://github.com/cboujoukos/sinatra-file-structure/blob/master/sinatra-file-structure.png)
 
+![](http://)
 TESTING IMAGE
