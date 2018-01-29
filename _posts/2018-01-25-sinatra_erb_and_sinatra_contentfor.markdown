@@ -9,7 +9,7 @@ For those of you that are unfamiliar with Sinatra, Sinatra is a Rack-based DSL (
 
 If you have worked with Sinatra before, you have certainly become familiar with the convential file system associated with Sinatra apps.
 
-![](https://imgur.com/a/yAnCh)
+!["Sinatra MVC File Structure"](https://i.imgur.com/toNkNxR.png)
 
 If you have used this MVC structure, then you have probably also seen something like this:
 ```
