@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "JavaScript Scope, Hoisting, and Arrow Functions"
-date:       2018-06-12 18:35:28 +0000
+date:       2018-06-12 14:35:29 -0400
 permalink:  javascript_scope_hoisting_and_arrow_functions
 ---
 
@@ -14,7 +14,7 @@ Scope refers to the accessibility of your variables, functions, and objects duri
 
 ## Hoisting
 
-The term hoisting refers to way that JavaScript “hoists” functions declarations and variables declared with `var` to top of their scope before executing any code. The terminology is really just a way for us to envision the way that our code is run, the JavaScript engine doesn’t actually shuffle our code around, moving functions and variables up to the top. Under the hood, all that’s happening is the JavaScript engine is making multiple passes through the code, and on the first pass it is storing our function declarations and variables in memory before it executes any code. It is important to note, however, that for variables the interpreter only ‘hoists’ the variable *declaration*, not the actual assignment of a value to the variable. So essentially, the JavaScript engine will interpret:
+The term hoisting refers to way that JavaScript “hoists” function declarations and variables declared with `var` to the top of their scope before executing any code. The terminology is really just a way for us humans to envision the way that our code is run, the JavaScript engine doesn’t actually shuffle our code around, moving functions and variables up to the top. Under the hood, all that’s happening is the JavaScript engine is making multiple passes through the code, and on the first pass it is storing our function declarations and variables in memory before it executes any code. It is important to note, however, that for variables the interpreter only ‘hoists’ the variable *declaration*, not the actual assignment of a value to the variable. So essentially, the JavaScript engine will interpret:
 ```
 console.log(greeting);
 hello();
@@ -33,7 +33,8 @@ function hello(){
 }
 var greeting;
 
-console.log(greeting)hello();
+console.log(greeting);
+hello();
 greeting = “Hi there”;
 
 console.log(greeting)
@@ -42,10 +43,10 @@ console.log(greeting)
  #=> hello
  #=> “Hi there”
 ```
-This seems like a good place to point out that undefined is NOT to be confused with *not defined* or *undeclared*. When the code above is run, the first time we console.log(greeting), the result is undefined, which means that the program knows the variable exists (thanks to var hoisting), but that it has not yet been assigned a value. If we had thrown a console.log(hamSandwich) in there, instead of logging ‘undefined’ we would have thrown a ReferenceError: hamSandwich is not defined. So even though when the program executes the variable ‘greeting’ has not yet been declared, the interpreter already knows that the variable exists at runtime.
+This seems like a good place to point out that undefined is NOT to be confused with *not defined* or *undeclared*. When the code above is run, the first time we console.log(greeting), the result is undefined, which means that the program knows the variable exists (thanks to var hoisting), but that it has not yet been assigned a value. If we had thrown a console.log(hamSandwich) in there, instead of logging ‘undefined’ we would have thrown a ReferenceError: hamSandwich is not defined. So even though at the time of execution the variable ‘greeting’ has not yet been declared, the interpreter already knows that the variable exists at runtime.
 
 If you, dear reader, are fairly familiar with ES6, you have probably noticed a couple of hints of what is to come next. I mentioned that specifically variables declared with `var` are hoisted, as well as briefly touching on block scoping. This brings us to our next topic, `var` versus `let/const`. 
-Up until ES6, all variables in JavaScript were declared with the keyword `var`. ES6 introduced two new keywords for declaring variables, `let` and `const`. What was wrong with `var`, you ask? Well, for starters, one major drawback with `var` is that JavaScript won’t throw an error if you declare the same variable twice. This has the potential to cause unexpected results, and can make debugging an issue more challenging. Both `let` and `const` on the other hand, will clearly complain if you try to declare a variable twice with the same name in the same scope. Another pitfall of `var` is that it lacks block scope. Block scope is similar to function scope, except it encompasses anything within a set of curly brackets. This applies not just to functions, but also to if statements, for loops, and the like. Let’s take a look at a couple of examples.
+Up until ES6, all variables in JavaScript were declared with the keyword `var`. ES6 introduced two new keywords for declaring variables, `let` and `const`. What was wrong with `var`, you ask? Well, for starters, one major drawback with `var` is that JavaScript won’t throw an error if you declare the same variable twice. This has the potential to cause unexpected results, and can make debugging an issue more challenging. Both `let` and `const` on the other hand, will clearly complain if you try to declare a variable twice with the same name in the same scope. Another pitfall of `var` is that it lacks block scope. Block scope is similar to function scope, except it encompasses anything within a set of curly brackets. This applies not just to functions, but also to `if` statements, `for` loops, and the like. Let’s take a look at a couple of examples.
 ```
 for (var i=0; i<10; i++) {
   // block scope for the for statement
